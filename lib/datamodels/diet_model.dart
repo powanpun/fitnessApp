@@ -5,11 +5,13 @@ class DietModel extends Equatable {
   final String type;
   final String image;
   final String title;
+  final String description;
 
   const DietModel({
     required this.type,
     required this.image,
     required this.title,
+    required this.description,
   });
 
   @override
@@ -20,6 +22,7 @@ class DietModel extends Equatable {
       type: snap['type'],
       image: snap['image'],
       title: snap['title'],
+      description: snap['description'],
     );
     return categoryModel;
   }

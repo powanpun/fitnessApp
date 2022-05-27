@@ -1,9 +1,11 @@
 import 'package:fitnessapp/datamodels/challenges_model.dart';
+import 'package:fitnessapp/datamodels/diet_model.dart';
 import 'package:fitnessapp/datamodels/workout_model.dart';
 import 'package:fitnessapp/screens/auth/forgot_password.dart';
 import 'package:fitnessapp/screens/auth/login.dart';
 import 'package:fitnessapp/screens/auth/signup.dart';
 import 'package:fitnessapp/screens/dashboard/bottom_navigation/bottom_navigation.dart';
+import 'package:fitnessapp/screens/dashboard/diet/diet_detail_page.dart';
 import 'package:fitnessapp/screens/dashboard/recommendation/recommendation_page.dart';
 import 'package:fitnessapp/screens/setting/setting.dart';
 import 'package:fitnessapp/screens/workout/workout.dart';
@@ -18,6 +20,7 @@ const String workoutRoute = "workoutPage";
 const String workoutDetailPageRoute = "workoutDetailPage";
 const String recommendationPageRoute = "recommendationPage";
 const String settingPageRoute = "settingPage";
+const String dietPageRoute = "dietPageRoute";
 
 class AppRoute {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -37,6 +40,13 @@ class AppRoute {
       case recommendationPageRoute:
         return MaterialPageRoute(
             builder: (context) => const RecommendationPage());
+
+      case dietPageRoute:
+        if (args is DietModel) {
+          return MaterialPageRoute(
+              builder: (context) => DietDetailPage(data: args));
+        }
+        return throw ("error on args on Diet Detail page");
       case workoutRoute:
         if (args is ChallengesModel) {
           return MaterialPageRoute(

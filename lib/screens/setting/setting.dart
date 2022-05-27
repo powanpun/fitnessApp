@@ -148,7 +148,9 @@ class _SettingPageState extends State<SettingPage> {
                                                       const SizedBox(
                                                         width: 8,
                                                       ),
-                                                      Text("200 k/cl",
+                                                      Text(
+                                                          snapshot.data![index]
+                                                              .title,
                                                           style: GoogleFonts.lato(
                                                               fontSize: 16,
                                                               fontWeight:
@@ -225,7 +227,7 @@ class _SettingPageState extends State<SettingPage> {
                                       child: InkWell(
                                         onTap: () {
                                           Navigator.pushNamed(
-                                              context, workoutRoute,
+                                              context, dietPageRoute,
                                               arguments: snapshot.data![index]);
                                         },
                                         child: Row(
@@ -271,52 +273,52 @@ class _SettingPageState extends State<SettingPage> {
                                                   const SizedBox(
                                                     height: 16,
                                                   ),
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons
-                                                            .local_fire_department,
-                                                        color:
-                                                            AppColors.mainColor,
-                                                        size: 16,
-                                                      ),
-                                                      const SizedBox(
-                                                        width: 8,
-                                                      ),
-                                                      Text("200 k/cl",
-                                                          style: GoogleFonts.lato(
-                                                              fontSize: 16,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: AppColors
-                                                                  .secondaryColor)),
-                                                    ],
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8,
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons.timer,
-                                                        color:
-                                                            AppColors.mainColor,
-                                                        size: 16,
-                                                      ),
-                                                      const SizedBox(
-                                                        width: 8,
-                                                      ),
-                                                      Text("20 mins per day",
-                                                          style: GoogleFonts.lato(
-                                                              fontSize: 16,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: AppColors
-                                                                  .secondaryColor)),
-                                                    ],
-                                                  ),
+                                                  // Row(
+                                                  //   children: [
+                                                  //     Icon(
+                                                  //       Icons
+                                                  //           .local_fire_department,
+                                                  //       color:
+                                                  //           AppColors.mainColor,
+                                                  //       size: 16,
+                                                  //     ),
+                                                  //     const SizedBox(
+                                                  //       width: 8,
+                                                  //     ),
+                                                  //     Text("200 k/cl",
+                                                  //         style: GoogleFonts.lato(
+                                                  //             fontSize: 16,
+                                                  //             fontWeight:
+                                                  //                 FontWeight
+                                                  //                     .bold,
+                                                  //             color: AppColors
+                                                  //                 .secondaryColor)),
+                                                  //   ],
+                                                  // ),
+                                                  // const SizedBox(
+                                                  //   height: 8,
+                                                  // ),
+                                                  // Row(
+                                                  //   children: [
+                                                  //     Icon(
+                                                  //       Icons.timer,
+                                                  //       color:
+                                                  //           AppColors.mainColor,
+                                                  //       size: 16,
+                                                  //     ),
+                                                  //     const SizedBox(
+                                                  //       width: 8,
+                                                  //     ),
+                                                  //     Text("20 mins per day",
+                                                  //         style: GoogleFonts.lato(
+                                                  //             fontSize: 16,
+                                                  //             fontWeight:
+                                                  //                 FontWeight
+                                                  //                     .bold,
+                                                  //             color: AppColors
+                                                  //                 .secondaryColor)),
+                                                  //   ],
+                                                  // ),
                                                 ],
                                               ),
                                             ))
