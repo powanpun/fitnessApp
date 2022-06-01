@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitnessapp/datamodels/challenges_model.dart';
 import 'package:fitnessapp/datamodels/diet_model.dart';
